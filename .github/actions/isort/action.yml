@@ -1,0 +1,11 @@
+name: "isort"
+
+description: "imports sort in proper way"
+
+outputs:
+  result:
+    description: resulting of cheks
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
