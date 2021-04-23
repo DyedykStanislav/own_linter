@@ -9,9 +9,15 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+#      - name: hello-action
+#        uses: ./.github/actions/hello-world
+
       - name: flake8
         uses: ./.github/actions/flake8
 
-      - name: isort
-        uses: ./.github/actions/isort
-
+#      - name: create-issue
+#        uses: ./.github/actions/issue-maker
+#        with:
+#          repoToken: ${{secrets.GITHUB_TOKEN}}
+#          catFact: ${{steps.cat.outputs.fact}}
+#          issueTitle: "a cat fact for you"
