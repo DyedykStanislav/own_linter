@@ -1,14 +1,10 @@
-FROM python:3.7.4-slim
+FROM python:3.8-slim
 
-LABEL "com.github.actions.name"="GitHub Action for Python Pylint"
-LABEL "com.github.actions.description"="Run pylint commands on python slim image"
-LABEL "com.github.actions.icon"="code"
-LABEL "com.github.actions.color"="black"
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
+RUN pip install --upgrade --no-cache-dir flake8==3.9.0 isort==5.8.0
 
-RUN pip install --upgrade pip
-RUN pip install pylint
+COPY entrypoint.sh /entrypoint.sh
 
-COPY entrypoint.sh /
-RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

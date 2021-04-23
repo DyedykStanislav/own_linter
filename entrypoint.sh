@@ -1,10 +1,18 @@
 #!/bin/bash
+
 set -e
 
-echo "#################################################"
-echo "Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
+# flake8-options = $1
+# isort-options = $2
 
-sh -c "$*"
+echo "Starting Python code linters..."
 
-echo "#################################################"
-echo "Completed ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
+echo "Running flake8..."
+flake8 $1
+echo "flake8 done!"
+
+echo "Running isort..."
+isort . --check --diff $2
+echo "isort done!"
+
+echo "Python code linters done"
