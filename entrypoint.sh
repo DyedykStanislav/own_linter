@@ -5,7 +5,7 @@ set -e
 echo "Starting Python code linters..."
 
 echo "------"
-ls -d ..
+ls ../home
 echo "------"
 
 echo "Running black..."
