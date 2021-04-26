@@ -5,6 +5,7 @@ set -e
 echo "Starting Python code linters..."
 
 echo "Running flake8..."
+flake8 $1
 echo "flake8 done!"
 
 echo "Running isort..."
