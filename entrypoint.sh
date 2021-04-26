@@ -5,9 +5,9 @@ set -e
 echo "Starting Python code linters..."
 
 echo "Running flake8..."
+echo "::set-output name=flake8::asdfasdfasdfasdfasdf"
 flake8 $1
 echo "flake8 done!"
-echo "::set-output name=flake8::asdfasdfasdfasdfasdf"
 
 echo "Running isort..."
 isort . $2
