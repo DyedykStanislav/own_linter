@@ -9,7 +9,7 @@ ls ..
 echo "------"
 
 echo "Running black..."
-black . --check --diff $1
+black
 echo "black done!"
 
 echo "Python code linters done"
