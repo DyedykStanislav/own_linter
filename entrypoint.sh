@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -c
 
 pip install flake8 isort black
 
