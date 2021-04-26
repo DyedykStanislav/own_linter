@@ -5,6 +5,14 @@ description: "Lint Python code the same way everywhere in Datawiz.io"
 author: "Datawiz.io"
 
 inputs:
+  flake8-options:
+    description: "Additional options to pass to run `flake8` with"
+    required: false
+    default: ""
+  isort-options:
+    description: "Additional options to pass to run `isort` with"
+    required: false
+    default: ""
   black-options:
     description: "Additional options to pass to run `black` with"
     required: false
@@ -14,4 +22,6 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
+    - ${{ inputs.flake8-options }}
+    - ${{ inputs.isort-options }}
     - ${{ inputs.black-options }}
