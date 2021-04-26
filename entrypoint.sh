@@ -4,7 +4,7 @@ set -e
 
 echo "Hello $1"
 time=$(date)
-echo "::set-output name=time::$time"
+echo "::set-output name=flake8::$time"
 
 echo "Starting Python code linters..."
 
