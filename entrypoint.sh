@@ -13,7 +13,7 @@ isort . $2
 echo "isort done!"
 
 echo "Running black..."
-black . --config setup.cfg $3
+black . --config /setup.cfg $3
 echo "black done!"
 
 echo "Python code linters done"
