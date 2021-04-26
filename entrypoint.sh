@@ -13,7 +13,7 @@ isort . --check-only --diff $2
 echo "isort done!"
 
 echo "Running black..."
-black . --check --diff $2
+black . --check --diff $3
 echo "black done!"
 
 echo "Python code linters done"
