@@ -13,6 +13,10 @@ inputs:
     description: "Additional options to pass to run `isort` with"
     required: false
     default: ""
+  black-options:
+    description: "Additional options to pass to run `black` with"
+    required: false
+    default: ""
 
 runs:
   using: "docker"
@@ -20,3 +24,4 @@ runs:
   args:
     - ${{ inputs.flake8-options }}
     - ${{ inputs.isort-options }}
+    - ${{ inputs.black-options }}
