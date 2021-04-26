@@ -2,6 +2,22 @@ name: "Flake8"
 
 description: "Code linting with flake8"
 
+
+inputs:
+  flake8-options:
+    description: "Additional options to pass to run `flake8` with"
+    required: false
+    default: ""
+  isort-options:
+    description: "Additional options to pass to run `isort` with"
+    required: false
+    default: ""
+  black-options:
+    description: "Additional options to pass to run `black` with"
+    required: false
+    default: ""
+
+
 outputs:
   result:
     description: resulting of cheks
@@ -9,4 +25,8 @@ outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ inputs.flake8-options }}
+    - ${{ inputs.isort-options }}
+    - ${{ inputs.black-options }}
 
