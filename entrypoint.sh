@@ -2,6 +2,7 @@
 
 set -e
 
+pip install flake8 isort black
 
 echo "Starting Python code linters..."
 
