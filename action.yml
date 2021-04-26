@@ -11,11 +11,11 @@ inputs:
   isort-options:
     description: "Additional options to pass to run `isort` with"
     required: false
-    default: ""
+    default: ". --check-only --diff"
   black-options:
     description: "Additional options to pass to run `black` with"
     required: false
-    default: ""
+    default: ". --check --diff"
 
 
 outputs:

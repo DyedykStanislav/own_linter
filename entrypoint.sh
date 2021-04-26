@@ -12,11 +12,11 @@ flake8 $1
 echo "flake8 done!"
 
 echo "Running isort..."
-isort . --check-only --diff
+isort $2
 echo "isort done!"
 
 echo "Running black..."
-black . --check --diff
+black $3
 echo "black done!"
 
 echo "Python code linters done"
