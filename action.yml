@@ -8,7 +8,7 @@ inputs:
   flake8-options:
     description: "Additional options to pass to run `flake8` with"
     required: false
-    default: ""
+    default: "--max-line-length 120"
   isort-options:
     description: "Additional options to pass to run `isort` with"
     required: false
