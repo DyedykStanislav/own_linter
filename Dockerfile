@@ -5,8 +5,8 @@ ENV PYTHONUNBUFFERED 1
 
 RUN pip install --upgrade --no-cache-dir flake8==3.9.0 isort==5.8.0 black==20.8b1
 
-COPY entrypoint.sh ./entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod +x ./entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
