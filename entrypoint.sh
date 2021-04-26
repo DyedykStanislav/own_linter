@@ -2,8 +2,6 @@
 
 set -e
 
-case $LINTER in
-  
 
 echo "Starting Python code linters..."
 
