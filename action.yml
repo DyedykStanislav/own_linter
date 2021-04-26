@@ -29,5 +29,4 @@ runs:
     - ${{ inputs.flake8-options }}
     - ${{ inputs.isort-options }}
     - ${{ inputs.black-options }}
-  entrypoint: './entrypoint.sh'
 
