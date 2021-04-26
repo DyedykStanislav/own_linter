@@ -4,6 +4,10 @@ set -e
 
 echo "Starting Python code linters..."
 
+echo "------"
+ls
+echo "------"
+
 echo "Running flake8..."
 flake8 $1
 echo "flake8 done!"
