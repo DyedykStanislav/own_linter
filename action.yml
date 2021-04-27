@@ -18,14 +18,6 @@ inputs:
     required: false
     default: ""
 
-outputs:
-  flake8:
-    description: 'flake8 output'
-  isort:
-    description: 'isort output'
-  blake:
-    description: 'blake output'
-
 runs:
   using: "docker"
   image: "Dockerfile"
