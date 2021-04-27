@@ -24,4 +24,4 @@ echo "black done!"
 
 echo "Python code linters done"
 
-exit status
+exit $status
