@@ -2,15 +2,9 @@
 
 set -e
 
-echo "Hello $1"
-time=$(date)
-echo ::set-output name=flake8::$time
-
 echo "Starting Python code linters..."
 
-
 echo "Running flake8..."
-echo ::set-output name=flake8::dfadfasdf
 flake8 $1
 echo "flake8 done!"
 
