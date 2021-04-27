@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -e
 
 echo "Starting Python code linters..."
 
